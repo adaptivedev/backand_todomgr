@@ -38,6 +38,7 @@
       'ngCookies',
       'home',
       'getting-started',
+      'todo',
       'common.header',
       'common.footer',
       'common.services.data',

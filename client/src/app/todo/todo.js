@@ -7,22 +7,22 @@
    */
   function config($stateProvider) {
     $stateProvider
-      .state('root.getting-started', {
-        url: '/getting-started',
+      .state('root.todo', {
+        url: '/todo',
         views: {
           '@': {
-            templateUrl: 'src/app/getting-started/getting-started.tpl.html',
-            controller: 'GettingStartedCtrl as start'
+            templateUrl: 'src/app/todo/todo.tpl.html',
+            controller: 'TodoCtrl as start'
           }
         }
       });
   }
 
   /**
-   * @name  gettingStartedCtrl
+   * @name  TodoCtrl
    * @description Controller
    */
-  function GettingStartedCtrl($log, Backand, $cookieStore, BackandService) {
+  function TodoCtrl($log, Backand, $cookieStore, BackandService) {
 
     var start = this;
 
@@ -80,7 +80,7 @@
     }
   }
 
-  angular.module('getting-started', [])
+  angular.module('todo', [])
     .config(config)
-    .controller('GettingStartedCtrl', ['$log', 'Backand', '$cookieStore', 'BackandService', GettingStartedCtrl]);
+    .controller('TodoCtrl', ['$log', 'Backand', '$cookieStore', 'BackandService', TodoCtrl]);
 })();
